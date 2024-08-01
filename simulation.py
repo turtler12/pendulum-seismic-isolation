@@ -173,7 +173,7 @@ def external_force(parameters, t):
     #fourier analysis case
     if len(parameters) == 4:
         (a1, b1, w1, w2) = parameters
-        return a1*np.sin(w1*t) + a1*np.cos(w1*t) + b1*np.sin(w2*t) + b1*np.cos(w2*t)
+        return a1*np.sin(w1*t) + b1*np.cos(w2*t)
     (a1, b1, a2, b2, w1, w2) = parameters
     return a1*np.sin(w1*t) + b1*np.cos(w1*t) + a2*np.sin(w2*t) + b2*np.cos(w2*t)
 
@@ -196,7 +196,7 @@ gammas = [2, 2, 2, 2, 2, 2] #friction
 ks = [1, 1, 1, 1, 1, 6]     #spring constant
 loc_force_applied = 1       #location of the external applied force
 
-#Initial conditions (thetas = [theta1, theta2, theta3, theta4, theta5, theta6], velocity in m/s)
+#Initial conditions: (thetas = [theta1, theta2, theta3, theta4, theta5, theta6], velocity in m/s)
 thetas = [np.radians(0), np.radians(0), np.radians(0), np.radians(0), np.radians(0), np.radians(0)]
 velocities = [0, 0, 0, 0, 0, 0.03]
 
