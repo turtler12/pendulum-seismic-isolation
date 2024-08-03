@@ -1,5 +1,5 @@
 # pendulum-seismic-isolation
-Summary: Used ML method and simulation/numerical integration techniques to seismically isolate a pyload.
+Summary: Used ML method and simulation/numerical integration techniques to seismically isolate a payload.
 
 
 Details:
