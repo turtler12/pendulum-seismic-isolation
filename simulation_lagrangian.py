@@ -5,12 +5,16 @@ from sympy import symbols, Eq, solve, sympify
 from sympy import sin, cos
 import matplotlib.pyplot as plt
 
+# Results using this program does not match the results given by numerical integrations. 
+# I think the equation in the 'solve_for_acceleration_lagrangian' function might have a small error or I am testing using large angles.
+#The numerical integration method agrees with experimental solutions.
 #%%
 
 """6 SYSTEM: (with lagrangian)"""
 
 
-#For large angles
+# Uses small angle approximations
+# Use the same initial conditions as the numerical integration method
 
 def phi(j, k):
     if j == k:
@@ -82,3 +86,4 @@ def six_node_pendulum_lagrangian(thetas, velocities):
             all_theta_lists[i].append(thetas_at_time_t[i])
             all_velocity_lists[i].append(velocities_at_time_t[i])
     return all_theta_lists, all_velocity_lists
+# %%
